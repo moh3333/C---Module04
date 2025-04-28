@@ -12,7 +12,7 @@
 
 #include "Cat.hpp"
 
-Cat::Cat(){
+Cat::Cat():brain(new Brain){
 	std::cout << "Cat Default Constructor Called\n";
 	this->type = "Cat";
 }
@@ -26,11 +26,13 @@ Cat& Cat::operator=(const Cat& other){
 	std::cout << "Cat Copy Assignment Operatot Called\n";
 	if (this != &other){
 		this->type = other.type;
+		this->brain = new Brain(*other.brain);
 	}	
 	return (*this);
 }
 
 Cat::~Cat(){
+	delete brain;
 	std::cout << "Cat Destructor Called\n";
 }
 

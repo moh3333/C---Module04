@@ -12,7 +12,7 @@
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal():type("DefaultTypemakeSoundWrongAnimal"){
+WrongAnimal::WrongAnimal():type("DefaultTypeWrongAnimal"){
     std::cout << "WrongAnimal Default Costructor Called\n";
 }
 

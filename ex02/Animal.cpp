@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthamir <mthamir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 16:15:38 by mthamir           #+#    #+#             */
-/*   Updated: 2025/04/25 16:26:03 by mthamir          ###   ########.fr       */
+/*   Created: 2025/04/25 15:40:43 by mthamir           #+#    #+#             */
+/*   Updated: 2025/04/25 16:24:38 by mthamir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Animal.hpp"
 
-Cat::Cat(){
-	std::cout << "Cat Default Constructor Called\n";
-	this->type = "Cat";
+Animal::Animal():type("DefaultTypeAnimal"){
+	std::cout << "Animal Default Constructor Called\n";
 }
 
-Cat::Cat(const Cat& other):Animal(other){
-	std::cout << "Cat Copy Constructor Called\n";
+Animal::Animal(const Animal& other){
+	std::cout << "Animal Copy Constructor Called\n";
 	*this = other;
 }
 
-Cat& Cat::operator=(const Cat& other){
-	std::cout << "Cat Copy Assignment Operatot Called\n";
+Animal&	Animal::operator=(const Animal& other){
+	std::cout << "Animal Copy Assignment Operatot Called\n";
 	if (this != &other){
 		this->type = other.type;
-	}	
+	}
 	return (*this);
 }
 
-Cat::~Cat(){
-	std::cout << "Cat Destructor Called\n";
+Animal::~Animal(){
+	std::cout << "Animal Destructor Called\n";
 }
 
-void	Cat::makeSound() const {
-	std::cout << "[ CAT ]  MEAO  ...\n";
+std::string Animal::getType() const{
+	std::cout << "getType Fun Called\n";
+	return (type);
 }

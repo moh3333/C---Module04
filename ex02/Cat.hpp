@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthamir <mthamir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 16:27:41 by mthamir           #+#    #+#             */
-/*   Updated: 2025/04/25 16:27:42 by mthamir          ###   ########.fr       */
+/*   Created: 2025/04/25 16:14:54 by mthamir           #+#    #+#             */
+/*   Updated: 2025/04/25 16:25:10 by mthamir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class WrongCat : public WrongAnimal {
+class Cat : public Animal {
+	Brain *brain;
 public:
-    WrongCat();
-    WrongCat(const WrongCat& other);
-    WrongCat& operator=(const WrongCat& other);
-	~WrongCat();
+	Cat();
+	Cat(const Cat& other);
+	Cat& operator=(const Cat& other);
+	~Cat();
 
 	void	makeSound() const ;
 };

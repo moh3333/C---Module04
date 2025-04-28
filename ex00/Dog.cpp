@@ -17,12 +17,13 @@ Dog::Dog(){
 	this->type = "Dog";
 }
 
-Dog::Dog(const Dog& other){
+Dog::Dog(const Dog& other):Animal(other){
 	std::cout << "Dog Copy Constructor Called\n";
 	*this = other;
 }
 
 Dog& Dog::operator=(const Dog& other){
+	std::cout << "Dog Copy Assignment Operatot Called\n";
 	if (this != &other){
 		this->type = other.type;
 	}	

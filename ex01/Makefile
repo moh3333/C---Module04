@@ -16,11 +16,11 @@ CC= c++
 
 CPPFLAGS=  -Wall -Wextra -Werror -std=c++98
 
-SRC= Animal.cpp Dog.cpp Cat.cpp  WrongCat.cpp WrongAnimal.cpp main.cpp
+SRC= Animal.cpp Dog.cpp Cat.cpp  WrongCat.cpp WrongAnimal.cpp main.cpp Brain.cpp 
 
-OBJ= main.o Animal.o Dog.o Cat.o WrongCat.o WrongAnimal.o
+OBJ= main.o Animal.o Dog.o Cat.o WrongCat.o WrongAnimal.o Brain.o
 
-HEADER= Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
+HEADER= Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp Brain.hpp 
 
 all: $(NAME)
 
