@@ -38,7 +38,7 @@ int main() {
     me->unequip(1);
     // me->unequip(2);
     // me->unequip(3);
-    // me->unequip(0);
+    // me->unequip(0);q
     me->equip(tmp4);
 
     me->use(1, *me1);
