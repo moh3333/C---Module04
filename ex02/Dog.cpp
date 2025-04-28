@@ -19,6 +19,7 @@ Dog::Dog():brain(new Brain){
 
 Dog::Dog(const Dog& other):Animal(other){
 	std::cout << "Dog Copy Constructor Called\n";
+	this->brain = 0;
 	*this = other;
 }
 
@@ -26,6 +27,7 @@ Dog& Dog::operator=(const Dog& other){
 	std::cout << "Dog Copy Assignment Operatot Called\n";
 	if (this != &other){
 		this->type = other.type;
+		delete this->brain;
 		this->brain = new Brain(*other.brain);
 	}	
 	return (*this);

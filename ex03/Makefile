@@ -2,7 +2,7 @@ NAME=InterfaceRecap
 
 CC= c++ 
 
-CPPFLAGS= 	-Wall -Wextra -Werror -std=c++98
+CPPFLAGS=	-Wall -Wextra -Werror -std=c++98
 
 SRC=	AMateria.cpp	Character.cpp	Cure.cpp	Ice.cpp	main.cpp	MateriaSource.cpp
 

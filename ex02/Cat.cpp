@@ -19,6 +19,7 @@ Cat::Cat():brain(new Brain){
 
 Cat::Cat(const Cat& other):Animal(other){
 	std::cout << "Cat Copy Constructor Called\n";
+	this->brain = 0;
 	*this = other;
 }
 
@@ -26,6 +27,7 @@ Cat& Cat::operator=(const Cat& other){
 	std::cout << "Cat Copy Assignment Operatot Called\n";
 	if (this != &other){
 		this->type = other.type;
+		delete this->brain;
 		this->brain = new Brain(*other.brain);
 	}	
 	return (*this);
